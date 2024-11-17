@@ -17,7 +17,7 @@ END ENTITY;
 ARCHITECTURE rtl OF testbench_board IS
     SIGNAL clk_250mhz, locked : STD_LOGIC;
     
-    SIGNAL rom_addr : INTEGER RANGE 0 TO DISPLAY_RESOLUTION := 0;
+    SIGNAL rom_addr : STD_LOGIC_VECTOR(14 DOWNTO 0) := (OTHERS => '0');
     SIGNAL rom_data : rgb_t := (OTHERS => '0');
     SIGNAL channel_r, channel_g, channel_b : byte := (OTHERS => '0');
     SIGNAL clk_25mhz, video_en : STD_LOGIC := '0';

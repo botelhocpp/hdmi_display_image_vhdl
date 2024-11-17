@@ -43,7 +43,7 @@ BEGIN
                 s_hsync <= '0';
                 hpos := 0;
             ELSIF (hpos = H_PULSE_WIDTH) THEN
-                s_hsync <='1';
+                s_hsync <= '1';
             ELSIF (hpos = H_PULSE_WIDTH + H_BACK_PORCH) THEN
                 h_active <= '1';
             ELSIF (hpos = H_PULSE_WIDTH + H_BACK_PORCH + FRAME_WIDTH) THEN
